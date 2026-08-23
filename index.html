@@ -1,45 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shani - Web Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shasawat Pratap | Web Developer</title>
 
     <style>
-        body {
-            font-family: Arial;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            background: #f4f4f4;
-            text-align: center;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
         }
 
         header {
-            background: #222;
+            background: #111827;
             color: white;
-            padding: 30px;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 22px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
         }
 
         section {
             background: white;
-            margin: 30px auto;
-            padding: 30px;
-            max-width: 700px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 40px;
+            margin: 25px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         h2 {
-            color: #333;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #111827;
         }
 
-        button {
-            background: blue;
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #2563eb;
             color: white;
-            border: none;
-            padding: 12px 25px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
             border-radius: 6px;
-            cursor: pointer;
+        }
+
+        .project a:hover {
+            background: #1d4ed8;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 15px;
+            background: #16a34a;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        footer {
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 25px 15px;
+            }
         }
     </style>
 </head>
@@ -47,31 +144,81 @@
 <body>
 
     <header>
-        <h1>Hi, I'm Shasawat pratap 👋</h1>
+        <h1>Hi, I'm Shasawat Pratap 👋</h1>
         <p>Beginner Web Developer</p>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a BCA student learning HTML, CSS and Web Development.
-        </p>
-    </section>
+    <div class="container">
 
-    <section>
-        <h2>My Skills</h2>
-        <p>HTML | CSS | JavaScript</p>
-    </section>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am a BCA student learning Web Development.
+                I create simple, responsive and user-friendly websites
+                using HTML, CSS and JavaScript.
+            </p>
+        </section>
 
-    <section>
-        <h2>Contact Me</h2>
-        <p>Email: pratapshasawat@gmail.com</p>
-        <button onclick="showMessage()">Contact Me</button>
-    </section>
-    <script>
-        function showMessage() {
-            alert("Thank you for contacting me! 😊");
-        }
-    </script>
+        <section>
+            <h2>My Skills</h2>
+
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">GitHub</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+
+            <div class="projects">
+
+                <div class="project">
+                    <h3>🌐 Portfolio Website</h3>
+                    <p>
+                        My personal portfolio website created
+                        using HTML, CSS and JavaScript.
+                    </p>
+
+                    <a href="https://shasawat726.github.io/shasawat-portfolio/" target="_blank">
+                        View Project
+                    </a>
+                </div>
+
+                <div class="project">
+                    <h3>🧮 Calculator</h3>
+                    <p>
+                        A working calculator created using
+                        HTML, CSS and JavaScript.
+                    </p>
+
+                    <a href="calculator.html" target="_blank">
+                        View Calculator
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Email: pratapshasawat@gmail.com
+            </p>
+
+            <a href="mailto:pratapshasawat@gmail.com">
+                Send Me an Email
+            </a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Shasawat Pratap | Web Developer</p>
+    </footer>
+
 </body>
 </html>
