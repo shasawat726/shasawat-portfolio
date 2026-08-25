@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-container">
+
+        <h1>🌤️ Weather App</h1>
+        <p>Check the current weather of any city</p>
+
+        <div class="search-box">
+            <p id="loading" class="loading">Loading...</p>
+            <button class="location-btn" onclick="getMyLocation()">
+                📍 Use My Location
+            </button>
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+            >
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+            <button class="dark-btn" onclick="toggleDarkMode()">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <div id="weatherResult">
+            <div class="forecast-section">
+
+                <h2>5-Day Forecast</h2>
+            
+                <div id="forecast"></div>
+            
+            </div>
+
+            <h2 id="cityName">Search a city</h2>
+
+            <div class="weather-icon" id="weatherIcon">
+                🌍
+            </div>
+
+            <h3 id="temperature">--°C</h3>
+
+            <p id="condition">Weather condition</p>
+
+            <div class="details">
+
+                <div>
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div>
+                    <span>💨</span>
+                    <p>Wind</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
